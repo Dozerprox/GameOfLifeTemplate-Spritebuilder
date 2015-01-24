@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Apportable. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "Grid.h"
 #import "Creature.h"
 
