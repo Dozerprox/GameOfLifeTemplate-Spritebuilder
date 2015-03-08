@@ -162,7 +162,6 @@ static const int GRID_COLUMNS = 10;
             }
         }
     }
-    _totalAlive = numAlive;
 }
 
 - (BOOL)isIndexValidForX:(int)x andY:(int)y
