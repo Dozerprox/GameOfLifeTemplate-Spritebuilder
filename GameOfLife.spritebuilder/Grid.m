@@ -142,6 +142,7 @@ static const int GRID_COLUMNS = 10;
 
 -(void)updateCreatures
 {
+    int numAlive = 0;
     // iterate through the all the creatures in the grid
     for (int i = 0; i < [_gridArray count]; i++)
     {
@@ -151,20 +152,19 @@ static const int GRID_COLUMNS = 10;
             if (currentCreature.livingNeighbors == 3)
             {
                 NSLog(@"3!");
-                currentCreature.isAlive = YES;
-                _totalAlive++;
+                currentCreature.isAlive = TRUE;
+                numAlive++;
             } else {
                 if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4)
                 {
-                    currentCreature.isAlive = NO;
-                    if (_totalAlive >= 1) {
-                        _totalAlive--;
-                    }
+                    currentCreature.isAlive = FALSE;
+                    numAlive--;
                 }
             }
 
         }
     }
+    _totalAlive = numAlive;
 }
 
 - (BOOL)isIndexValidForX:(int)x andY:(int)y
