@@ -150,6 +150,7 @@ static const int GRID_COLUMNS = 10;
             Creature *currentCreature = _gridArray[i][j];
             if (currentCreature.livingNeighbors == 3)
             {
+                NSLog("3!");
                 currentCreature.isAlive = YES;
                 _totalAlive++;
             } else {
