@@ -158,13 +158,12 @@ static const int GRID_COLUMNS = 10;
                 if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4)
                 {
                     currentCreature.isAlive = FALSE;
-                    numAlive--;
                 }
             }
 
         }
     }
-    _totalAlive += numAlive;
+    _totalAlive = numAlive;
 }
 
 - (BOOL)isIndexValidForX:(int)x andY:(int)y
