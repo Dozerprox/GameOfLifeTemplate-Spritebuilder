@@ -157,7 +157,6 @@ static const int GRID_COLUMNS = 10;
             {
                 currCreature.isAlive = FALSE;
             }
-            NSLog(@"%d",j);
 
         }
         NSLog(@"%d",i);
