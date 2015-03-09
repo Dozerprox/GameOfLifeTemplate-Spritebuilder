@@ -142,21 +142,21 @@ static const int GRID_COLUMNS = 10;
 
 -(void)updateCreatures
 {
-    Creature *currCreature;
     int numAlive = 0;
     // iterate through the all the creatures in the grid
     for (int i = 0; i < [_gridArray count]; i++)
     {
         for (int j = 0; j < [_gridArray[i] count]; j++)
         {
-            currCreature = (Creature *) _gridArray[i][j];
-            if (currCreature.livingNeighbors == 3)
+            Creature *currentCreature = _gridArray[i][j];
+            if (currentCreature.livingNeighbors == 3)
             {
-                currCreature.isAlive = TRUE;
+                currentCreature.isAlive = TRUE;
                 numAlive+=1;
-            } else if (currCreature.livingNeighbors <= 1 || currCreature.livingNeighbors >= 4)
+                NSLog(@"ALIVE");
+            } else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4)
             {
-                currCreature.isAlive = FALSE;
+                currentCreature.isAlive = FALSE;
             }
         }
 
