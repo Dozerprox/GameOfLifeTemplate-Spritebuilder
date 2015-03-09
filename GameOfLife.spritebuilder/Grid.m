@@ -157,10 +157,10 @@ static const int GRID_COLUMNS = 10;
             {
                 currCreature.isAlive = FALSE;
             }
-            NSLog(j);
+            NSLog(@"%d",j);
 
         }
-        NSLog(i);
+        NSLog(@"%d",i);
     }
     _totalAlive = numAlive;
 }
