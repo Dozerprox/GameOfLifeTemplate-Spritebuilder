@@ -148,15 +148,15 @@ static const int GRID_COLUMNS = 10;
     {
         for (int j = 0; j < [_gridArray[i] count]; j++)
         {
-            Creature *currentCreature = _gridArray[i][j];
-            if (currentCreature.livingNeighbors == 3)
+            Creature *currCreature = _gridArray[i][j];
+            if (currCreature.livingNeighbors == 3)
             {
                 NSLog(@"3!");
-                currentCreature.isAlive = TRUE;
+                currCreature.isAlive = TRUE;
                 numAlive+=1;
-            } else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4)
+            } else if (currCreature.livingNeighbors <= 1 || currCreature.livingNeighbors >= 4)
             {
-                currentCreature.isAlive = FALSE;
+                currCreature.isAlive = FALSE;
             }
 
         }
